@@ -1,0 +1,11 @@
+1. Phân tích: Thành phần của web The Band --> OK
+    1. Header
+    2. Slider
+    3. Content
+        3.1. About
+        3.2. Tour
+        3.3. Contact
+        3.4. Image
+    4. Footer
+
+2. Dựng bases (Xây móng)
