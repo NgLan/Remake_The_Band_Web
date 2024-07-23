@@ -9,6 +9,11 @@ html {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+html, body {
+    line-height: 1.5; /* Khoảng cách giữa các dòng */
+    font-size: 15px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 400;
@@ -39,7 +44,6 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     height: 46.5px;
     background-color: black;
-    font-size: 15px;
     z-index: 1;
 }
 
@@ -146,9 +150,50 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bolder;
 }
 
+#content .content-section {
+    max-width: 800px;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-#content {
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 4px;
+} 
 
+#content .section-sub-heading {
+    text-align: center;
+    opacity: 0.6;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+#content .about-text {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+#content .member-list {
+    overflow: hidden; /* Để giải quyết vấn đề thẻ con dùng float */
+    padding: 32px 0;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.333333%; 
+    text-align: center;
+}
+
+#content .member-name {
+    margin: 15px 0;
+}
+
+#content .member-img {
+    margin-bottom: 16px;
+    width: 154px;
+    border-radius: 4px;
 }
 
 #footer {
