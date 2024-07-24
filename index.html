@@ -72,10 +72,53 @@
             </div>
 
             <!-- Tour section -->
-            <div class="content-section">
-                <h2 class="section-heading">TOUR DATES</h2>
-                <p class="section-sub-heading">Remember to book your tickets!</p>
-            </div>
+            <div class="tour-section">
+                <div class="content-section">
+                    <h2 class="section-heading text-white">TOUR DATES</h2>
+                    <p class="section-sub-heading text-white">Remember to book your tickets!</p>
+                    <br>
+
+                    <!-- Tickets -->
+                    <ul class="tickets-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October  <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                    </ul>
+
+                    <!-- Place -->
+                    <div class="places-list">
+                        <div class="place-item">
+                            <img src="./assets/img/place/newyork.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <b class="place-heading">New York</b>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="place-item">
+                            <img src="./assets/img/place/paris.jpg" alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <b class="place-heading">Paris</b>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="place-item">
+                            <img src="./assets/img/place/sanfran.jpg" alt="San Francisco" class="place-img">
+                            <div class="place-body">
+                                <b class="place-heading">San Francisco</b>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
             
             <!-- Contact section -->
             <div class="content-section">
@@ -88,6 +131,42 @@
         <div id="footer">
 
         </div> 
+    </div>
+
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="modal-header">
+                <h2>
+                    <i class="fa-solid fa-suitcase"></i> Tickets
+                </h2>
+            </header>
+            
+            <div class="modal-body">
+                <label for="ticket-quantity" class="modal-label">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="ticket-quantity" type="text" class="model-input" placeholder="How many?">
+
+                <label for="ticket-email" class="modal-label">
+                    <i class="fa-solid fa-user"></i>
+                    Send to
+                </label>
+                <input id="ticket-email" type="email" class="model-input" placeholder="Enter email">
+
+                <button id="buy-tickets">
+                    PAY <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
