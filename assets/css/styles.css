@@ -33,10 +33,54 @@ h1, h2, h3, h4, h5, h6 {
 4. Kiểu dáng (kiểu chữ, hình tròn, vuông,...)
 */
 
+/* Common */
 .text-white {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* margin-bottom: 16px; */
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+/* Main */
 #main {
 
 }
@@ -181,14 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #content .member-list {
-    overflow: hidden; /* Để giải quyết vấn đề thẻ con dùng float */
     padding: 32px 0;
-}
-
-#content .member-item {
-    float: left;
-    width: 33.333333%; 
-    text-align: center;
 }
 
 #content .member-name {
@@ -238,14 +275,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Places */
 .places-list {
     padding: 32px 0;
-    overflow: hidden;
-    margin: 0 -8px;
-}
-
-.place-item {
-    float: left;
-    width: 33.333333%;
-    padding: 0 8px 16px 8px;
 }
 
 .place-img {
@@ -266,16 +295,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 15px 0;
 }
 
-.place-heading {
-
-}
-
 .place-time {
     opacity: 0.6;
-}
-
-.place-desc {
-
 }
 
 .place-buy-btn {
@@ -283,6 +304,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     padding: 8px 16px;
     text-decoration: none;
+    cursor: pointer;
+    border: none;
 }
 
 .place-buy-btn:hover {
@@ -290,13 +313,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ccc;
 }
 
-/* Footer section */
-#footer {
-
-}
-
 /* Modal */
-.modal.open {
+.modal.open { /* Không có dấu cách giữa modal và open là chỉ thẻ có cả 2 class này */
     display: flex;
 }
 
@@ -318,6 +336,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.5s;
 }
 
 .modal-container .modal-close {
@@ -382,9 +401,60 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-footer {
     text-align: right;
-    margin: 15px 0;
+    margin: 16px;
 }
 
 .modal-footer a {
     color: #2196F3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact form */
+.contact-content {
+    padding: 32px 0;
+}
+
+.contact-info {
+    font-size: 18px;
+}
+
+.contact-info i {
+    display: inline-block;
+    width: 35px;
+}
+
+.contact-form .form-control {
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    font-size: 15px;
+    padding: 10px 16px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    float: right;
+}
+
+.contact-form .form-submit-btn:hover {
+    color: #000;
+    background-color: #ccc
+}
+
+/* Footer section */
+#footer {
+
 }
